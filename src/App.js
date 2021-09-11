@@ -1,22 +1,32 @@
 import React, { Component } from 'react';
 import ListNama from './component/ListNama';
-
+import ListKesukaan from './component/ListKesukaan';
 
 export default class App extends Component {
   state = {
     listNama: false,
+    listKesukaan: false,
 
   }
 
   onClickNo = () => {
     alert(`OKKAY CUKUP TAU`);
-    this.setState({listNama: false})
+    this.setState({ listNama: false })
   }
 
   onClickYes = () => {
-    this.setState({listNama: true})
+    this.setState({ listNama: true })
   }
-  
+
+  onClickNo2 = () => {
+    alert(`TERIMA KASIH TELAH MEMBUKA`);
+    this.setState({ listKesukaan: false })
+  }
+
+  onClickYes2 = () => {
+    this.setState({ listKesukaan: true })
+  }
+
 
   render() {
     return (
@@ -28,6 +38,12 @@ export default class App extends Component {
           <button className="btn btn-danger" onClick={this.onClickNo}>{this.props.no}</button>
           <button className="btn btn-success" onClick={this.onClickYes}>{this.props.yes}</button>
           {this.state.listNama && <ListNama data={this.props.data} />}
+          <div className="row h-100 justify-content-center">
+            <h2>Apakah Kamu ingin tahu hal favorit anggota kami ?</h2>
+            <button className="btn btn-danger" onClick={this.onClickNo2}>{this.props.no2}</button>
+            <button className="btn btn-success" onClick={this.onClickYes2}>{this.props.yes2}</button>
+            {this.state.listKesukaan && <ListKesukaan data2={this.props.data2} />}
+          </div>
         </div>
       </div>
     )
