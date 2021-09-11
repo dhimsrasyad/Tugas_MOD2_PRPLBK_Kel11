@@ -15,7 +15,7 @@ let data2 = [
 
 ReactDOM.render(
   <React.StrictMode>
-    <App title="Apakah Kamu ingin tahu siapa saja kelompok 11 ?" no="No" yes="Yes" data={data} no2="No" yes2="Yes" data2={data2} />
+    <App title="Apakah Kamu ingin tahu siapa saja kelompok 11 ?" no="No" yes="Yes" data={data} title2="Apakah Kamu ingin tahu hal favorit anggota kami ?" no2="No" yes2="Yes" data2={data2} />
   </React.StrictMode>,
   document.getElementById('root')
 );

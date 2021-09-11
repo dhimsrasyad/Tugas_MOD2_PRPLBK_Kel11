@@ -38,8 +38,10 @@ export default class App extends Component {
           <button className="btn btn-danger" onClick={this.onClickNo}>{this.props.no}</button>
           <button className="btn btn-success" onClick={this.onClickYes}>{this.props.yes}</button>
           {this.state.listNama && <ListNama data={this.props.data} />}
+          <h2 className="row text-center">
+            {this.props.title2}
+          </h2>
           <div className="row h-100 justify-content-center">
-            <h2>Apakah Kamu ingin tahu hal favorit anggota kami ?</h2>
             <button className="btn btn-danger" onClick={this.onClickNo2}>{this.props.no2}</button>
             <button className="btn btn-success" onClick={this.onClickYes2}>{this.props.yes2}</button>
             {this.state.listKesukaan && <ListKesukaan data2={this.props.data2} />}
